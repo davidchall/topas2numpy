@@ -1,0 +1,26 @@
+TOPAS ASCII Phase Space
+
+Number of Original Histories: 100
+Number of Original Histories that Reached Phase Space: 100
+Number of Scored Particles: 104
+
+Columns of data are as follows:
+ 1: Position X (cm)
+ 2: Position Y (cm)
+ 3: Position Z (cm)
+ 4: Direction Cosine X
+ 5: Direction Cosine Y
+ 6: Energy (MeV)
+ 7: Weight
+ 8: Particle Type (in PDG Format)
+ 9: Flag to tell if Third Direction Cosine is Negative (1 means true)
+10: Flag to tell if this is the First Scored Particle from this History (1 means true)
+
+Number of e-: 4
+Number of proton: 100
+
+Minimum Kinetic Energy of e-: 0.0411577 MeV
+Minimum Kinetic Energy of proton: 147.683 MeV
+
+Maximum Kinetic Energy of e-: 0.297634 MeV
+Maximum Kinetic Energy of proton: 148.547 MeV
