@@ -4,7 +4,7 @@
 import re
 import os.path
 
-# third party imports
+# third-party imports
 import numpy as np
 
 
