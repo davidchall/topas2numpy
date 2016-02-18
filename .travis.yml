@@ -1,14 +1,16 @@
 language: python
 
 python:
-  - "2.7"
-  - "3.3"
-  - "3.4"
-  - "3.5"
+  - 2.7
+  - 3.3
+  - 3.4
+  - 3.5
 
-install: pip install -U tox tox-travis
+install: pip install coverage coveralls
 
-script: tox
+script: coverage run --source=topas_result setup.py test
+
+after_sucess: coveralls
 
 deploy:
   provider: pypi
