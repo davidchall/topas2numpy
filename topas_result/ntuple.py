@@ -63,7 +63,7 @@ def read_ascii_ntuple(ntuple_path, header_path):
     # preserve column names => cannot be viewed as a np.recarray
     # http://docs.scipy.org/doc/numpy-1.10.1/user/basics.io.genfromtxt.html#validating-names
     return np.genfromtxt(ntuple_path, names=col_names,
-                         deletechars='', replace_space='')
+                         deletechars=set(), replace_space='')
 
 
 def read_binary_ntuple(ntuple_path, header_path):

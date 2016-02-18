@@ -10,7 +10,7 @@ install: pip install coverage coveralls
 
 script: coverage run --source=topas_result setup.py test
 
-after_sucess: coveralls
+after_success: coveralls
 
 deploy:
   provider: pypi
