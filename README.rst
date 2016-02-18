@@ -4,11 +4,15 @@ Topas Result
 
 .. image:: https://img.shields.io/pypi/v/topas_result.svg
         :target: https://pypi.python.org/pypi/topas_result
+        :alt: PyPI Package
 
 .. image:: https://img.shields.io/travis/davidchall/topas_result.svg
         :target: https://travis-ci.org/davidchall/topas_result
+        :alt: Build Status
 
-.. image:: https://coveralls.io/repos/github/davidchall/topas_result/badge.svg?branch=master :target: https://coveralls.io/github/davidchall/topas_result?branch=master
+.. image:: https://coveralls.io/repos/github/davidchall/topas_result/badge.svg?branch=master
+        :target: https://coveralls.io/github/davidchall/topas_result?branch=master
+        :alt: Code Coverage
 
 .. image:: https://readthedocs.org/projects/topas_result/badge/?version=latest
         :target: https://readthedocs.org/projects/topas_result/?badge=latest
