@@ -8,6 +8,8 @@ Topas Result
 .. image:: https://img.shields.io/travis/davidchall/topas_result.svg
         :target: https://travis-ci.org/davidchall/topas_result
 
+.. image:: https://coveralls.io/repos/github/davidchall/topas_result/badge.svg?branch=master :target: https://coveralls.io/github/davidchall/topas_result?branch=master
+
 .. image:: https://readthedocs.org/projects/topas_result/badge/?version=latest
         :target: https://readthedocs.org/projects/topas_result/?badge=latest
         :alt: Documentation Status
@@ -22,11 +24,3 @@ Features
 --------
 
 * TODO
-
-Credits
----------
-
-This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
-
-.. _Cookiecutter: https://github.com/audreyr/cookiecutter
-.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
