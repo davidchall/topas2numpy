@@ -6,9 +6,9 @@ python:
   - 3.4
   - 3.5
 
-install: pip install coverage coveralls
+install: pip install -U tox tox-travis coverage coveralls
 
-script: coverage run --source=topas_result setup.py test
+script: tox
 
 after_success: coveralls
 
