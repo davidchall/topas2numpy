@@ -42,6 +42,10 @@ import topas_result
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = ['sphinx.ext.autodoc', 'sphinx.ext.viewcode']
 
+# Add modules to prevent import errors that halt the building process
+# when some external dependencies are not importable at build time.
+autodoc_mock_imports = ['numpy']
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
