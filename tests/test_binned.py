@@ -12,9 +12,6 @@ Tests for TOPAS binned reading.
 import unittest
 import os.path
 
-# third-party imports
-from numpy.testing import assert_array_almost_equal
-
 # project imports
 from topas2numpy import BinnedResult
 
