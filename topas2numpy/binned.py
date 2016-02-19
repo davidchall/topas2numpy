@@ -9,7 +9,14 @@ import numpy as np
 
 
 class BinnedDimension(object):
-    """docstring for BinnedDimension"""
+    """A dimension in which the geometry component is binned.
+
+    Attributes:
+        name  {X, Y, Z, R, Phi, Theta}
+        unit  {cm, deg}
+        n_bins
+        bin_width
+    """
     def __init__(self, name, unit, n_bins, bin_width):
         self.name = name
         self.unit = unit

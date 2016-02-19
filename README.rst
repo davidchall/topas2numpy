@@ -16,7 +16,7 @@ TOPAS_ is a Monte Carlo tool for particle simulation, designed for medical physi
 - **binned**: a quantity (e.g. dose) is accumulated within a binned geometry component
 - **ntuple**: multiple data columns are recorded per particle history
 
-This package is able to read both data types, allowing further analysis within Python.
+This package is able to read both data types, enabling analysis within Python.
 
 
 
