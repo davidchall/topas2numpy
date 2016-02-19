@@ -21,4 +21,4 @@ deploy:
   on:
     tags: true
     repo: davidchall/topas2numpy
-    condition: $TOXENV == py27
+    python: '2.7'
