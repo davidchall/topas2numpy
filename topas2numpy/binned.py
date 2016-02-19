@@ -131,8 +131,8 @@ class BinnedResult(object):
                     self.dimensions.append(dimension)
 
         # retrieve scored quantity info
-        re_score_unit = '(?P<quant>.+) \( (?P<unit>.+) \) : (?P<stats>.+)'
-        re_score_unitless = '(?P<quant>.+) : (?P<stats>.+)'
+        re_score_unit = '# (?P<quant>.+) \( (?P<unit>.+) \) : (?P<stats>.+)'
+        re_score_unitless = '# (?P<quant>.+) : (?P<stats>.+)'
         regex_unit = re.compile(re_score_unit)
         regex_unitless = re.compile(re_score_unitless)
 
