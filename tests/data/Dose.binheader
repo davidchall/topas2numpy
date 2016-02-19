@@ -1,0 +1,9 @@
+# TOPAS Version: 2.0.p3_expanded
+# Parameter File: Scoring_03A.txt
+# Results for scorer Dose
+# Scored in component: Phantom
+# X in 1 bin  of 50 cm
+# Y in 1 bin  of 50 cm
+# Z in 40 bins of 0.5 cm
+# DoseToMedium ( Gy ) : Sum   Mean   Histories_with_Scorer_Active   Count_in_Bin   Second_Moment   Variance   Standard_Deviation   Min   Max   
+# Binary file: Dose.bin
