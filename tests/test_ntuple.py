@@ -18,7 +18,7 @@ from numpy.testing import assert_array_almost_equal
 from numpy.lib.recfunctions import append_fields
 
 # project imports
-from topas_result import read_ntuple
+from topas2numpy import read_ntuple
 
 
 data_dir = 'tests/data'

@@ -46,7 +46,7 @@ clean-test:
 	rm -fr htmlcov/
 
 lint:
-	flake8 topas_result tests
+	flake8 topas2numpy tests
 
 test:
 	python setup.py test
@@ -55,15 +55,15 @@ test-all:
 	tox
 
 coverage:
-	coverage run --source topas_result setup.py test
+	coverage run --source topas2numpy setup.py test
 	coverage report -m
 	coverage html
 	$(BROWSER) htmlcov/index.html
 
 docs:
-	rm -f docs/topas_result.rst
+	rm -f docs/topas2numpy.rst
 	rm -f docs/modules.rst
-	sphinx-apidoc -o docs/ topas_result
+	sphinx-apidoc -o docs/ topas2numpy
 	$(MAKE) -C docs clean
 	$(MAKE) -C docs html
 	$(BROWSER) docs/_build/html/index.html

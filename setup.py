@@ -23,24 +23,24 @@ test_requirements = [
 ]
 
 setup(
-    name='topas_result',
+    name='topas2numpy',
     version='0.1.0',
     description="Python functions for reading TOPAS result files",
     long_description=readme + '\n\n' + history,
     author="David Hall",
     author_email='dhcrawley@gmail.com',
-    url='https://github.com/davidchall/topas_result',
+    url='https://github.com/davidchall/topas2numpy',
     packages=[
-        'topas_result',
+        'topas2numpy',
     ],
-    package_dir={'topas_result':
-                 'topas_result'},
+    package_dir={'topas2numpy':
+                 'topas2numpy'},
     include_package_data=True,
     install_requires=requirements,
     license="MIT",
     zip_safe=False,
     keywords=[
-        'topas_result',
+        'topas2numpy',
         'topas',
     ],
     classifiers=[

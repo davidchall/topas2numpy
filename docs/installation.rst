@@ -6,9 +6,9 @@ Installation
 
 At the command line::
 
-    $ easy_install topas_result
+    $ easy_install topas2numpy
 
 Or, if you have virtualenvwrapper installed::
 
-    $ mkvirtualenv topas_result
-    $ pip install topas_result
+    $ mkvirtualenv topas2numpy
+    $ pip install topas2numpy

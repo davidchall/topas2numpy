@@ -2,6 +2,6 @@
 Usage
 =====
 
-To use Topas Result in a project::
+To use topas2numpy in a project::
 
-    import topas_result
+    import topas2numpy

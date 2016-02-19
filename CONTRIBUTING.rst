@@ -15,7 +15,7 @@ Types of Contributions
 Report Bugs
 ~~~~~~~~~~~
 
-Report bugs at https://github.com/davidchall/topas_result/issues.
+Report bugs at https://github.com/davidchall/topas2numpy/issues.
 
 If you are reporting a bug, please include:
 
@@ -38,14 +38,14 @@ is open to whoever wants to implement it.
 Write Documentation
 ~~~~~~~~~~~~~~~~~~~
 
-Topas Result could always use more documentation, whether as part of the
-official Topas Result docs, in docstrings, or even on the web in blog posts,
+topas2numpy could always use more documentation, whether as part of the
+official topas2numpy docs, in docstrings, or even on the web in blog posts,
 articles, and such.
 
 Submit Feedback
 ~~~~~~~~~~~~~~~
 
-The best way to send feedback is to file an issue at https://github.com/davidchall/topas_result/issues.
+The best way to send feedback is to file an issue at https://github.com/davidchall/topas2numpy/issues.
 
 If you are proposing a feature:
 
@@ -57,17 +57,17 @@ If you are proposing a feature:
 Get Started!
 ------------
 
-Ready to contribute? Here's how to set up `topas_result` for local development.
+Ready to contribute? Here's how to set up `topas2numpy` for local development.
 
-1. Fork the `topas_result` repo on GitHub.
+1. Fork the `topas2numpy` repo on GitHub.
 2. Clone your fork locally::
 
-    $ git clone git@github.com:your_name_here/topas_result.git
+    $ git clone git@github.com:your_name_here/topas2numpy.git
 
 3. Install your local copy into a virtualenv. Assuming you have virtualenvwrapper installed, this is how you set up your fork for local development::
 
-    $ mkvirtualenv topas_result
-    $ cd topas_result/
+    $ mkvirtualenv topas2numpy
+    $ cd topas2numpy/
     $ python setup.py develop
 
 4. Create a branch for local development::
@@ -78,7 +78,7 @@ Ready to contribute? Here's how to set up `topas_result` for local development.
 
 5. When you're done making changes, check that your changes pass flake8 and the tests, including testing other Python versions with tox::
 
-    $ flake8 topas_result tests
+    $ flake8 topas2numpy tests
     $ python setup.py test
     $ tox
 
@@ -102,7 +102,7 @@ Before you submit a pull request, check that it meets these guidelines:
    your new functionality into a function with a docstring, and add the
    feature to the list in README.rst.
 3. The pull request should work for Python 2.7, 3.3, 3.4 and 3.5, and for PyPy. Check
-   https://travis-ci.org/davidchall/topas_result/pull_requests
+   https://travis-ci.org/davidchall/topas2numpy/pull_requests
    and make sure that the tests pass for all supported Python versions.
 
 Tips
@@ -110,4 +110,4 @@ Tips
 
 To run a subset of tests::
 
-    $ python -m unittest tests.test_topas_result
+    $ python -m unittest tests.test_topas2numpy

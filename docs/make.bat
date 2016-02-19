@@ -115,9 +115,9 @@ if "%1" == "qthelp" (
 	echo.
 	echo.Build finished; now you can run "qcollectiongenerator" with the ^
 .qhcp project file in %BUILDDIR%/qthelp, like this:
-	echo.^> qcollectiongenerator %BUILDDIR%\qthelp\topas_result.qhcp
+	echo.^> qcollectiongenerator %BUILDDIR%\qthelp\topas2numpy.qhcp
 	echo.To view the help file:
-	echo.^> assistant -collectionFile %BUILDDIR%\qthelp\topas_result.ghc
+	echo.^> assistant -collectionFile %BUILDDIR%\qthelp\topas2numpy.ghc
 	goto end
 )
 

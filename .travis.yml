@@ -20,5 +20,5 @@ deploy:
     secure: nPUzupWOgnO8wxr7+os3P1KfM+2amcZR9GfqHlkcq7FA9422hK2TK2gdRSK6uz0gvOfQjJS71B1KAeD8IpigqFFL6h27hwZLVcsYhYBzw4itGPHwdqLkx4+pRhJI51PfvlNviHuuK8mvzCn6LRa6DAc2dt1YDilU7lrT7e+eSGh1m7qOBqdl2lMNz4k3Z2hqML/+fA37uAmyVEaemkdoa+I3piFDhqry5G++RbUb201KrM3jvo1WS/YoXvKDJlMdkT7ZpVbVRHKubi/YKcOfFN99IsNkwF+6a0InL5+8p8c69jhwuxI9x2s+mI/PK6g3EfWHUXH5RuyMo0YJh2YzLSTWiyCeeNyS6/nj+t96MLMQdGDkWhM4ndIUwy+ZCt+eq34aE77WAiuUtAo5ttRvu3Gs/K4egl8ifgC8B7kUQmT1uPV0tRQV78ay1o3907HuhLpEo9XYRaN6GUW78nWHlKrQi+Hds3JaowRx2kp3ATHaoDV6ksJx2dUdU2Fo3w/CcNphAUHdm8iFO44tdtHufOCLOPjS37E9M2dNLF+SBQhMriZQ5Dn4olkg9zFinKI5cqQlIGLvN1FEjU8+wbGBlmqtVUrfOLqykyqoAbYoIw77N+bq2tcUDKK1/bYMEcjBesHx+zpyhkfaqAA6ZKe/44hbja/aVKmkDhXgd3H7t7U=
   on:
     tags: true
-    repo: davidchall/topas_result
+    repo: davidchall/topas2numpy
     condition: $TOXENV == py27

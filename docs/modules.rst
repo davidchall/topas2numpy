@@ -1,7 +1,7 @@
-topas_result
-============
+topas2numpy
+===========
 
 .. toctree::
    :maxdepth: 4
 
-   topas_result
+   topas2numpy

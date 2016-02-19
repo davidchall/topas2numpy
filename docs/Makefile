@@ -85,17 +85,17 @@ qthelp:
 	@echo
 	@echo "Build finished; now you can run "qcollectiongenerator" with the" \
 	      ".qhcp project file in $(BUILDDIR)/qthelp, like this:"
-	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/topas_result.qhcp"
+	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/topas2numpy.qhcp"
 	@echo "To view the help file:"
-	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/topas_result.qhc"
+	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/topas2numpy.qhc"
 
 devhelp:
 	$(SPHINXBUILD) -b devhelp $(ALLSPHINXOPTS) $(BUILDDIR)/devhelp
 	@echo
 	@echo "Build finished."
 	@echo "To view the help file:"
-	@echo "# mkdir -p $$HOME/.local/share/devhelp/topas_result"
-	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/topas_result"
+	@echo "# mkdir -p $$HOME/.local/share/devhelp/topas2numpy"
+	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/topas2numpy"
 	@echo "# devhelp"
 
 epub:

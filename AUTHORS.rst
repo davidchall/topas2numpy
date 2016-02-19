@@ -5,7 +5,7 @@ Credits
 Development Lead
 ----------------
 
-* David Hall <dhcrawley@gmail.com>
+* David Hall
 
 Contributors
 ------------
