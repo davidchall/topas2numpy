@@ -1,22 +1,12 @@
-Welcome to topas2numpy's documentation!
-========================================
+Documentation for topas2numpy
+=============================
 
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    readme
    installation
    usage
-   contributing
-   authors
    history
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
