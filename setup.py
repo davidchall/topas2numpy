@@ -24,7 +24,7 @@ test_requirements = [
 
 setup(
     name='topas2numpy',
-    version='0.1.0',
+    version='0.1.1',
     description="Python functions for reading TOPAS result files",
     long_description=readme + '\n\n' + history,
     author="David Hall",
