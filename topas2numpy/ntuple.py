@@ -69,8 +69,11 @@ def read_ascii_ntuple(ntuple_path, header_path):
 def read_binary_ntuple(ntuple_path, header_path):
     col_types = []
     col_desc_marker = 'Byte order of each record is as follows:'
-    re_tot = '\s?(?P<startbyte>{u})\s?-\s?(?P<endbyte>{u})\s?: (?P<name>{s})'
-    regex = re.compile(re_tot.format(u=re_uint, s=re_str))
+    re_old = '\s?(?P<startbyte>{u})\s?-\s?(?P<endbyte>{u})\s?: (?P<name>{s})'
+    re_old = re.compile(re_old.format(u=re_uint, s=re_str))
+
+    re_new = '(?P<dtype>[bfi]{u}): (?P<name>{s})'
+    re_new = re.compile(re_new.format(u=re_uint, s=re_str))
 
     with open(header_path) as f:
         read_col_names = False
@@ -80,11 +83,20 @@ def read_binary_ntuple(ntuple_path, header_path):
                 continue
 
             if read_col_names:
-                match = regex.search(line)
-                if match:
-                    name = match.group('name').strip()
-                    b1 = int(match.group('startbyte'))
-                    b2 = int(match.group('endbyte'))
+                match_new = re_new.search(line)
+                match_old = re_old.search(line)
+
+                # new-style headers use "f4: Name" format
+                if match_new:
+                    name = match_new.group('name').strip()
+                    dtype = match_new.group('dtype').strip()
+                    col_types.append((name, dtype))
+
+                # old-style headers use " 0- 3: Name" format
+                elif match_old:
+                    name = match_old.group('name').strip()
+                    b1 = int(match_old.group('startbyte'))
+                    b2 = int(match_old.group('endbyte'))
                     n_bytes = b2-b1+1
 
                     dtype = 'f'
