@@ -11,7 +11,7 @@ re_uint = '\d+'
 re_str = '[\S+ \t]+'
 
 phasespace_int_columns = [
-    'Particle Type',
+    'Particle Type (in PDG Format)',
     'Run ID',
     'Event ID',
     'Track ID',
