@@ -10,6 +10,18 @@ import numpy as np
 re_uint = '\d+'
 re_str = '[\S+ \t]+'
 
+phasespace_int_columns = [
+    'Particle Type',
+    'Run ID',
+    'Event ID',
+    'Track ID',
+    'Parent ID',
+    'Seed Part 1',
+    'Seed Part 2',
+    'Seed Part 3',
+    'Seed Part 4',
+]
+
 
 def read_ntuple(filepath):
     root, ext = os.path.splitext(filepath)
@@ -102,7 +114,7 @@ def read_binary_ntuple(ntuple_path, header_path):
                     dtype = 'f'
                     if n_bytes == 1:
                         dtype = 'b'
-                    elif 'Particle Type' in name:
+                    elif name in phasespace_int_columns:
                         dtype = 'i'
                     dtype = dtype + str(n_bytes)
 
