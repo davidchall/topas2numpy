@@ -57,6 +57,8 @@ class BinnedResult(object):
 
     def _read_binary(self):
         """Reads data and metadata from binary format."""
+        # NOTE: binary files store binned data using Fortran-like ordering.
+        # Dimensions are iterated like z, y, x (so x changes fastest)
 
         header_path = self.path + 'header'
         with open(header_path) as f_header:
@@ -70,12 +72,14 @@ class BinnedResult(object):
 
         # reshape data according to binning
         data_shape = [dim.n_bins for dim in self.dimensions]
-        data = {k: v.reshape(data_shape) for k, v in data.items()}
+        data = {k: v.reshape(data_shape, order='F') for k, v in data.items()}
 
         self.data = data
 
     def _read_ascii(self):
         """Reads data and metadata from ASCII format."""
+        # NOTE: ascii files store binned data using C-like ordering.
+        # Dimensions are iterated like x, y, z (so z changes fastest)
 
         header_str = ''
         with open(self.path) as f:
