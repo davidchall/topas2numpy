@@ -1,0 +1,12 @@
+Number of Original Histories: 10
+Number of Scored Entries: 1587
+Number of Bytes per Particle: 24
+
+Byte order of each record is as follows:
+f4: Local position X [cm]
+f4: Local position Y [cm]
+f4: Local position Z [cm]
+f4: Wavelength [nm]
+f4: Arrival time [ns]
+i4: ProcessID: 1 Scintillation, 2 Cerenkov, 3 Absorption
+

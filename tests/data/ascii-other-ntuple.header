@@ -1,0 +1,11 @@
+Number of Original Histories: 10
+Number of Scored Entries: 1587
+
+Columns of data are as follows:
+1: Local position X [cm]
+2: Local position Y [cm]
+3: Local position Z [cm]
+4: Wavelength [nm]
+5: Arrival time [ns]
+6: ProcessID: 1 Scintillation, 2 Cerenkov, 3 Absorption
+

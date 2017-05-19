@@ -25,6 +25,8 @@ data_dir = 'tests/data'
 ascii_path = os.path.join(data_dir, 'ascii-phasespace.phsp')
 binary_path = os.path.join(data_dir, 'binary-phasespace.phsp')
 limited_path = os.path.join(data_dir, 'limited-phasespace.phsp')
+ascii_other_path = os.path.join(data_dir, 'ascii-other-ntuple.phsp')
+binary_other_path = os.path.join(data_dir, 'binary-other-ntuple.phsp')
 
 column_names = (
     'Position X (cm)',
@@ -48,6 +50,15 @@ column_names_limited = (
     'Direction Cosine X',
     'Direction Cosine Y',
     'Weight',
+)
+
+other_column_names = (
+    'Local position X [cm]',
+    'Local position Y [cm]',
+    'Local position Z [cm]',
+    'Wavelength [nm]',
+    'Arrival time [ns]',
+    'ProcessID: 1 Scintillation, 2 Cerenkov, 3 Absorption',
 )
 
 
@@ -105,6 +116,24 @@ class TestCompare(unittest.TestCase):
         for col in checked:
             assert_array_almost_equal(self.ascii[col], self.limited[col],
                                       decimal=3)
+
+
+class CommonOtherTests(object):
+    def test_column_names(self):
+        self.assertEqual(self.result.dtype.names, other_column_names)
+
+    def test_size(self):
+        self.assertEqual(self.result.size, 1587)
+
+
+class TestAsciiOtherNtuple(unittest.TestCase, CommonOtherTests):
+    def setUp(self):
+        self.result = read_ntuple(ascii_other_path)
+
+
+class TestBinaryOtherNtuple(unittest.TestCase, CommonOtherTests):
+    def setUp(self):
+        self.result = read_ntuple(binary_other_path)
 
 
 if __name__ == '__main__':
