@@ -47,15 +47,15 @@ class BinnedResult(object):
         dimensions: list of BinnedDimension objects
         data:       dict of scored data
     """
-    def __init__(self, filepath):
+    def __init__(self, filepath, dtype=float):
         self.path = filepath
         _, ext = os.path.splitext(self.path)
         if ext == '.bin':
-            self._read_binary()
+            self._read_binary(dtype)
         elif ext == '.csv':
-            self._read_ascii()
+            self._read_ascii(dtype)
 
-    def _read_binary(self):
+    def _read_binary(self, dtype):
         """Reads data and metadata from binary format."""
         # NOTE: binary files store binned data using Fortran-like ordering.
         # Dimensions are iterated like z, y, x (so x changes fastest)
@@ -64,7 +64,7 @@ class BinnedResult(object):
         with open(header_path) as f_header:
             self._read_header(f_header.read())
 
-        data = np.fromfile(self.path)
+        data = np.fromfile(self.path, dtype=dtype)
 
         # separate data by statistic
         data = data.reshape((len(self.statistics), -1), order='F')
@@ -76,7 +76,7 @@ class BinnedResult(object):
 
         self.data = data
 
-    def _read_ascii(self):
+    def _read_ascii(self, dtype):
         """Reads data and metadata from ASCII format."""
         # NOTE: ascii files store binned data using C-like ordering.
         # Dimensions are iterated like x, y, z (so z changes fastest)
@@ -88,7 +88,7 @@ class BinnedResult(object):
                     header_str += line
         self._read_header(header_str)
 
-        data = np.loadtxt(self.path, delimiter=',', unpack=True, ndmin=1)
+        data = np.loadtxt(self.path, dtype=dtype, delimiter=',', unpack=True, ndmin=1)
 
         # separate data by statistic (neglecting bin columns when necessary)
         n_dim = len(self.dimensions)

@@ -12,6 +12,9 @@ Tests for TOPAS binned reading.
 import unittest
 import os.path
 
+# third-party imports
+import numpy as np
+
 # project imports
 from topas2numpy import BinnedResult
 
@@ -55,6 +58,7 @@ class TestAscii1D(unittest.TestCase):
         assert self.result.statistics[0] == 'Sum'
         assert len(self.result.data) == 1
         data = self.result.data['Sum']
+        assert data.dtype == np.float64
         assert data.shape[0] == self.result.dimensions[0].n_bins
         assert data.shape[1] == self.result.dimensions[1].n_bins
         assert data.shape[2] == self.result.dimensions[2].n_bins
@@ -62,7 +66,7 @@ class TestAscii1D(unittest.TestCase):
 
 class TestAscii2D(unittest.TestCase):
     def setUp(self):
-        self.result = BinnedResult(ascii_2d_path)
+        self.result = BinnedResult(ascii_2d_path, dtype=np.uint32)
 
     def test_quantity(self):
         assert self.result.quantity == 'SurfaceTrackCount'
@@ -88,6 +92,7 @@ class TestAscii2D(unittest.TestCase):
         assert self.result.statistics[0] == 'Sum'
         assert len(self.result.data) == 1
         data = self.result.data['Sum']
+        assert data.dtype == np.uint32
         assert data.shape[0] == self.result.dimensions[0].n_bins
         assert data.shape[1] == self.result.dimensions[1].n_bins
         assert data.shape[2] == self.result.dimensions[2].n_bins
