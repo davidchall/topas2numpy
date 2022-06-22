@@ -2,7 +2,7 @@
 topas2numpy
 ===============================
 
-|pypi| |travis-ci| |coveralls| |readthedocs|
+|pypi| |ci| |readthedocs|
 
 Reading TOPAS_ results into NumPy_ arrays.
 
@@ -41,13 +41,9 @@ Basic Usage
         :target: https://pypi.python.org/pypi/topas2numpy
         :alt: PyPI Package
 
-.. |travis-ci| image:: https://img.shields.io/travis/davidchall/topas2numpy.svg
-        :target: https://travis-ci.org/davidchall/topas2numpy
+.. |ci| image:: https://github.com/davidchall/topas2numpy/workflows/CI/badge.svg
+        :target: https://github.com/davidchall/topas2numpy/actions
         :alt: Build Status
-
-.. |coveralls| image:: https://coveralls.io/repos/github/davidchall/topas2numpy/badge.svg?branch=master
-        :target: https://coveralls.io/github/davidchall/topas2numpy?branch=master
-        :alt: Code Coverage
 
 .. |readthedocs| image:: http://readthedocs.org/projects/topas2numpy/badge/?version=latest
         :target: http://topas2numpy.readthedocs.org/en/latest/?badge=latest
